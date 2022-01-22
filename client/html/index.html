@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<title>Demo</title>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+			<link rel="stylesheet" href="../style/index.css">
+			<script src="../lib/jquery-3.6.0.min.js"></script>
+			<script src="../lib/index.js"></script>
+		</head>
+		<body>			
+			<div class="templateSetting">
+				<label>CSS Style:</label>				
+				<select id="cssStyle" oninput=postStyleSelect()>				
+					<option value="cssStyle1">style1</option>
+					<option value="cssStyle2">style2</option>
+					<option value="cssStyle3">style3</option>
+					<option value="cssStyle4">style4</option>
+				</select>			
+				<br>				
+				<label>Backend Lauguage:</label>
+				<select id="backendLang" oninput=postBackLanguageSelect()>				
+					<option value="bk_lang_php">php</option>
+					<option value="bk_lang_ruby">ruby on Rail</option>
+					<option value="bk_lang_nodejs">Node.js </option>
+					<option value="bk_lang_c++">C++</option>
+				</select>
+			</div>
+			<div class="loginBox">
+				<label>Account:</label>
+				<input type="text" id="UserID"><br>
+				<label>Password:</label>
+				<input type="text" id="UserPW"><br>
+				<button id="loginBtn" onclick=login()>Login</button>
+				<p><a href="registerPage.html" style="color:blue">Forgot?</a></p>
+			</div>
+			<div style="text-align: center">
+				<br><br><br>
+				<button id="testBtn" onclick=test()>Test</button>
+			</div>
+		</body>
+	</html>
