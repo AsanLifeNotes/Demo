@@ -10,14 +10,14 @@
 		</head>
 		<body>			
 			<div class="templateSetting">
-				<label>CSS Style:</label>				
+				<p><label>CSS Style:</label>				
 				<select id="cssStyle" oninput=postStyleSelect()>				
 					<option value="cssStyle1">style1</option>
 					<option value="cssStyle2">style2</option>
 					<option value="cssStyle3">style3</option>
 					<option value="cssStyle4">style4</option>
-				</select>			
-				<br>				
+				</select></p>
+				<p>
 				<label>Backend Lauguage:</label>
 				<select id="backendLang" oninput=postBackLanguageSelect()>				
 					<option value="bk_lang_php">php</option>
@@ -25,18 +25,28 @@
 					<option value="bk_lang_nodejs">Node.js </option>
 					<option value="bk_lang_c++">C++</option>
 				</select>
+				</p>
 			</div>
+			<br>
 			<div class="loginBox">
-				<label>Account:</label>
-				<input type="text" id="UserID"><br>
-				<label>Password:</label>
-				<input type="text" id="UserPW"><br>
-				<button id="loginBtn" onclick=login()>Login</button>
-				<p><a href="registerPage.html" style="color:blue">Forgot?</a></p>
+				<p><label>Account:</label>
+				<input type="text" id="UserID"></p>
+				<p><label>Password:</label>
+				<input type="text" id="UserPW"></p>
+				<p class="error" id="showEnterIDPW">*Please enter the ID/PW</p>
+				<p><input type="checkbox"></input>Remember Password</p><br>
+				<button id="loginBtn" onclick=login()>Login</button><br>
+				<p><a href="registerPage.html" style="color:blue">Forgot Password?</a><p>
+				<p><a href="">Google<a>
+				<a href="">FB<a>
+				<a href="">Twitter<a><p>
+				<p><a href="">Sign Up<a><p>
 			</div>
-			<div style="text-align: center">
-				<br><br><br>
-				<button id="testBtn" onclick=test()>Test</button>
+			<p>			
+			<div style="text-align: center">				
+				<button id="testPHPBtn" onclick=testPHP()>TestPHP</button>
+				<button id="testJSBtn" onclick=testJS()>TestJS</button>
 			</div>
+			</p>
 		</body>
 	</html>
