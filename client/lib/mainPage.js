@@ -14,3 +14,33 @@ function switchContext(stat){
 		break;
 	}
 }
+
+function joinStage(){
+
+}
+
+function showInfo(){
+}
+
+function throwAway(){
+	
+}
+
+function putChat(){
+
+}
+
+function buy(){
+
+}
+
+function sell(){
+}
+
+function getSetting(){
+
+}
+
+function updateSetting(){
+
+}
