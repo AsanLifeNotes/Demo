@@ -1,8 +1,12 @@
+body{	
+	margin: auto;
+	
+}
 .templateSetting{		
 	color: green;
 	text-align: center;
 }
-.loginBox{	
+.loginBox{			
 	text-align: center;
 }
 .error{

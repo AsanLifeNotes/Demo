@@ -1,22 +1,103 @@
 <!DOCTYPE html>
-	<html lang="en">
-		<head>
-			<title>Mainpage</title>
-			<meta charset="utf-8">
-			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-			<link rel="stylesheet" href="../style/mainPage.css">
-			<script src="../lib/mainPage.js"></script>
-		</head>
-		<body>
-			<p>This is Mainpage</p>
-			<div ><iframe src="terminal.html"></iframe></div>
-			<div><p>ChatList</p></div>
-			<div>
-				<button onclick=switchContext("Stage")>Stage</button>
-				<button onclick=switchContext("ItemBox")>Box</button>
-				<button onclick=switchContext("Guild")>Guild</button>
-				<button onclick=switchContext("Shop")>Shop</button>
-				<button onclick=switchContext("Option")>Option</button>
+<html lang="en">
+
+<head>
+	<title>Mainpage</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="../style/mainPage.css">	
+	<script src="../lib/jquery-3.6.0.min.js"></script>
+	<script src="../lib/util.js"></script>
+	<script src="../lib/itemBox.js"></script>
+	<script src="../lib/GM_Operation.js"></script>
+	<script src="../lib/mainPage.js"></script>
+</head>
+
+<body style="text-align: center">
+	<div>
+		<table style="table-layout:fixed;margin-left: auto;margin-right: auto;">
+			<tr>
+				<td style="width:50px;">Coin:</td>
+				<td style="width:50px;" id="coin"></td>
+				<td style="width:50px;">Crystal:</td>
+				<td style="width:50px;" id="crystal"></td>
+			</tr>
+		</table>
+	</div>
+	<div><iframe src="terminal.html" id="terminal" style="height: 400px;"></iframe></div>	
+	<div id="chatRoom">Chat Room</div>
+	<div><input type="text" id="msgInput"></input><button onclick="putChat()">send</button></div>
+	<div>
+		<button onclick="switchContent('Stage')" disabled>Stage</button>
+		<button onclick="switchContent('ItemBox')">Box</button>
+		<button onclick="switchContent('Guild')" disabled>Guild</button>
+		<button onclick="switchContent('Shop')">Shop</button>
+		<button onclick="switchContent('Option')">Option</button>
+	</div>
+	<p></p>
+	<div style="border: 1px solid black;"></div>	
+	<p></p>
+	<div>
+		<div class="tab">
+			<button class="tablinks" onclick="openPage(event,'manageAccount')" >Account</button>
+			<button class="tablinks" onclick="openPage(event,'manageItem')" id="defaultOpen">Item</button>
+			<button class="tablinks" onclick="openPage(event,'manageStore')">Store</button>
+			<button class="tablinks" onclick="openPage(event,'manageMob')">Mob</button>
+			<button class="tablinks" onclick="openPage(event,'manageStage')" disabled>Stage</button>			
+			<button onclick="shopRefresh('coin')">RefreshCoinShop</button>
+			<button onclick="shopRefresh('crystal')">RefreshCrystalShop</button>
+			<button onclick="shopRefresh('world')">RefreshWorldShop</button>
+		</div>
+		<div class="managePage">
+			<div id="manageAccount" class="tabcontent" >																	
+				<table id=managedAccountList style='width:100%'>
+				</table>
 			</div>
-		</body>
-	</html>
+			<div id="manageItem" class="tabcontent" >									
+				<label>UID : </label><input type="text" id="itemUID"></input>
+				<label>Item Name : </label><input type="text"id="itemName"></input>
+				<label>Value : </label><input type="text" id="itemValue"></input>
+				<label>Information : </label><input type="text"id="itemINFO"></input>									
+				<button onclick="submitManageItem()">Submit</button>
+				<table id=managedItemList style='width:100%'>
+				</table>
+			</div>
+			<div id="manageStore" class="tabcontent">
+				<select id="storeSelection" onchange="changeShop()">
+					<option value="system_store_coin">Coin Shop</option>
+					<option value="system_store_crystal">Crystal Shop</option>
+					<option value="system_store_world">World Shop</option>
+				  </select>				
+				<label>Item UID : </label><input type="text" id="storeItemUID"></input>
+				<label>Item Name : </label><input type="text" id="storeItemName"></input>
+				<label>Quantity : </label><input type="text" id="storeQuantity"></input>				
+				<label>Price : </label><input type="text" id="storePrice"></input>
+				<button onclick="submitManageStore()">Submit</button>
+				<table id=managedStoreList style='width:100%'>
+				</table>
+			</div>
+			<div id="manageMob" class="tabcontent">				
+				<label>UID : </label><input type="text" id="mobUID"></input>
+				<label>Mob Name : </label><input type="text" id="mobName"></input>
+				<label>Value : </label><input type="text" id="mobValue"></input>
+				<label>Information : </label><input type="text" id="mobINFO"></input>				
+				</form>
+				<button onclick="submitManageMob()">Submit</button>
+				<table id=managedMobList style='width:100%'>
+
+				</table>
+			</div>
+			<div id="manageStage" class="tabcontent">									
+					<label>UID : </label><input type="text" id="stageUID"></input>
+					<label>Stage Name : </label><input type="text" id="stageName"></input>
+					<label>Value : </label><input type="text" id="stageValue"></input>
+					<label>Information : </label><input type="text" id="stageINFO"></input>									
+				<button onclick="submitManageStage()">Submit</button>
+				<table id=managedStageList style='width:100%'>
+				</table>
+			</div>			
+		</div>				
+	</div>
+</body>
+
+</html>

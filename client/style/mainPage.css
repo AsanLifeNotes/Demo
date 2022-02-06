@@ -1,7 +1,32 @@
-.templateSetting{		
-	color: green;
-	text-align: center;
+body{
+	text-align: center;	
 }
-.loginBox{	
-	text-align: center;
+#chatRoom{	
+	margin-left: auto;
+	margin-right: auto;
+	width: 500px;
+	text-align: left;	
+	height: 200px;
+	scroll-behavior: smooth;
+	overflow-y: auto;
+	overflow-wrap: break-word;	
+	border: 1px solid black;	
 }
+
+.tabcontent {
+	display: none;
+	padding: 6px 12px;
+	border: 1px solid #ccc;
+	border-top: none;
+  }
+.tab{
+	display: none;
+}
+
+.managePage input{
+	width: 100px;
+}
+
+table, th, td {
+	border: 1px solid black;
+  }

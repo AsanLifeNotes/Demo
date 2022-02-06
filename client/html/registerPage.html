@@ -1,24 +1,50 @@
 <!DOCTYPE html>
-	<html lang="en">
-		<head>
-			<title>Demo</title>
-			<meta charset="utf-8">
-			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-			<link rel="stylesheet" href="style.css">
-			<script src="behavior.js"></script>
-		</head>
-		<body>
-			<div class="templateSetting">
-				<label>CSS Style:</label><br>
-				<label>Lauguage:</label>
-			</div>
-			<div class="loginBox">
-			<label>Account:</label>
-			<input type="text" id="UID"><br>
-			<label>Password:</label>
-			<input type="text" id="UPW"><br>
-			<button id="loginBtn" onclick=login()>Login</button>
-			<p herf="registerPage.html">Forgot?</p>
-			</div>
-		</body>
-	</html>
+<html lang="en">
+
+<head>
+	<title>Demo</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="style.css">
+	<script src="../lib/registerPage.js"></script>
+	<script src="../lib/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+	<div style="text-align: center">
+		<p id="errMsg" style="visibility:hidden"></p>
+		<p>First name: <input type="text" id="firstName"></input></p>
+		<p>Last name: <input type="text" id="lastName"></input></p>
+		<p>Username: <input class="required" type="text" id="userName"></input></p>
+		<p>Password: <input class="required" type="password" id="password"></input></input>
+			<input type="checkbox" onclick="showPassword()" id="showPasswordCheck">Show password</input>
+		</p>
+		<p>Password confirm: <input class="required" type="password" id="passwordConfirm"></p>
+		<p>Email: <input class="required" type="email" id="email" placeholder="xxx@example.com"></input></p>
+		<p>Phone: <select id="countryCode">
+				<option value="000">+000</option>
+				<option value="886">+886</option>
+			</select>
+			<input type="text" id="phone"></input>
+		</p>
+		<p>Country: <input type="text" id="country" list="countryName">
+			<datalist id="countryName">
+				<option value="Taiwan">
+				<option value="Japan">
+			</datalist>
+			</input>
+		</p>
+		<p>City: <input type="text" id="city" list="cityName">
+			<datalist id="cityName">
+				<option value="Taipei">
+				<option value="Taichung">
+			</datalist>
+			</input>
+		</p>
+		<p>Address: <input type="text" id="address"></input></p>		
+		<p><button id="submit" onclick="smt()">Submit</button></p><br><br>
+		<p><button onclick="setInfo()">Set Demo Info </button></p>
+	</div>
+</body>
+
+</html>

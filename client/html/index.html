@@ -7,9 +7,10 @@
 			<link rel="stylesheet" href="../style/index.css">
 			<script src="../lib/jquery-3.6.0.min.js"></script>
 			<script src="../lib/index.js"></script>
+			<script src="../lib/util.js"></script>
 		</head>
 		<body>			
-			<div class="templateSetting">
+			<div class="templateSetting" hidden>
 				<p><label>CSS Style:</label>				
 				<select id="cssStyle" oninput=postStyleSelect()>				
 					<option value="cssStyle1">style1</option>
@@ -32,21 +33,15 @@
 				<p><label>Account:</label>
 				<input type="text" id="UserID"></p>
 				<p><label>Password:</label>
-				<input type="text" id="UserPW"></p>
+				<input type="password" id="UserPW"></p>
 				<p class="error" id="showEnterIDPW">*Please enter the ID/PW</p>
-				<p><input type="checkbox"></input>Remember Password</p><br>
-				<button id="loginBtn" onclick=login()>Login</button><br>
-				<p><a href="registerPage.html" style="color:blue">Forgot Password?</a><p>
+				<p><input type="checkbox" onclick="savePW()" id="rememberPW"></input>Remember Password</p><br>
+				<button id="loginBtn" onclick="login()">Login</button><br>
+				<p><a href="" style="color:blue">Forgot Password?</a><p>
 				<p><a href="">Google<a>
 				<a href="">FB<a>
 				<a href="">Twitter<a><p>
-				<p><a href="">Sign Up<a><p>
-			</div>
-			<p>			
-			<div style="text-align: center">				
-				<button id="testPHPBtn" onclick=testPHP()>TestPHP</button>
-				<button id="testJSBtn" onclick=testJS()>TestJS</button>
-			</div>
-			</p>
+				<p><a href="registerPage.html">Sign Up<a><p>
+			</div>			
 		</body>
 	</html>

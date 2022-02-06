@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Demo</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="../style/shop.css">
+	<script src="../lib/jquery-3.6.0.min.js"></script>
+	<script src="../lib/shop.js"></script>
+</head>
+
+<body>
+	<div class="tab">
+		<button class="tablinks" onclick="openPage(event,'coinShop')" id="defaultOpen">Coin Shop</button>
+		<button class="tablinks" onclick="openPage(event,'crystalShop')">Crystal Shop</button>
+		<button class="tablinks" onclick="openPage(event,'worldShop')">World Shop</button>
+	</div>
+	<div>		
+		<div class="managePage">
+			<div id="coinShop" class="tabcontent">
+				<table id=managedItemList style='width:100%'>
+				</table>
+			</div>
+			<div id="crystalShop" class="tabcontent">
+				<table id=managedStoreList style='width:100%'>
+				</table>
+			</div>
+			<div id="worldShop" class="tabcontent">
+				
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

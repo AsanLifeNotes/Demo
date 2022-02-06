@@ -1,0 +1,11 @@
+.tabcontent {
+	display: none;
+	padding: 6px 12px;
+	border: 1px solid #ccc;
+	border-top: none;
+  }
+
+  table, th, td {	  
+	  width: 100%;
+	border: 1px solid black;
+  }
