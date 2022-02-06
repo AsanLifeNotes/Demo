@@ -56,8 +56,9 @@
 		}
 		$box = substr($box, 0, -1);			
 		$box.="}";
-		$list = array("account_UID"=>$obj["UID"],"coin"=>1000,"crystal"=>3000,"box_state"=>$box);
+		$list = array("account_UID"=>$obj["UID"],"coin"=>1000,"crystal"=>3000);
 		addData("user_personal_game_data",$list);		
+		addData("user_box",array("account_UID"=>$obj["UID"]));
 	}
 
 	function getGameData(){		
