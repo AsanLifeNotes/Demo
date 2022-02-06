@@ -61,7 +61,7 @@
         unset($s["UID"]);
         unset($s["account_UID"]);        
         foreach($s as $k =>$v){
-            if($v==0){
+            if($v=="0"){
                 $s=$k;
                 break;
             }

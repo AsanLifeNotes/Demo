@@ -53,7 +53,7 @@ function postData() {
     $.post("../../server/userOperation/accountControl.php",{data:datapack}).done((e)=>{   
         console.log(e);     
         if(parseInt(e)===-1){errMsg("Email account already exists!");}
-        //else if(parseInt(e)===1){window.open("../html/index.html","_self");}        
+        else if(parseInt(e)===1){window.open("../html/index.html","_self");}        
     });
 }
 
