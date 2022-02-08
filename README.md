@@ -31,14 +31,14 @@ What context will sessions fill the disk space?
 Can it handle more context?
 ## Environment Initialize
 ### database table generate
-improve the generator script's UX.
+improve the generator script's UX.\n
 How to design an table column? 
 What column a table need?
 How to do table's trade off?
 Need split table or not?
 ### set functional servers
 chat server?
-certification server?
+certification server? (not finish)
 ## Next Step
 ### refactoring
 The architecture is terrible. It can be more independent and modular.
