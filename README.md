@@ -34,7 +34,8 @@ Can it handle more context?
 improve the generator script's UX.
 How to design an table column? 
 What column a table need?
-How to do coulumns trade off?
+How to do table's trade off?
+Need split table or not?
 ### set functional servers
 chat server?
 certification server?
