@@ -3,8 +3,8 @@
 ### Login
 #### account check
 format check --> ID/PW match --> success/fail
-#### 3rf-party API login
-Google/FB/Twitter
+#### 3rd-party API login
+Google/FB/Twitter (Not finish.)
 #### register session/cookie
 What information can put in cookies?
 What information can dump to session?
