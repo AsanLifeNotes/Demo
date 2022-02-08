@@ -31,9 +31,9 @@ What context will sessions fill the disk space?
 Can it handle more context?
 ## Environment Initialize
 ### database table generate
-<p>improve the generator script's UX.</p>
-<p>How to design an table column? </p>
-<p>What column a table need?</p>
+Improve the generator script's UX.
+How to design an table column?
+What column a table need?
 How to do table's trade off?
 Need split table or not?
 ### set functional servers
